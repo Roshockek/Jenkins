@@ -11,6 +11,16 @@
   <version>1.0-SNAPSHOT</version>
   <name>Jenkins Maven Webapp</name>
   <url>http://maven.apache.org</url>
+   <profile>
+            <id>jenkins</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <webdriver.browser>chrome</webdriver.browser>
+                <webdriver.mode>grid</webdriver.mode>
+            </properties>
+        </profile>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
